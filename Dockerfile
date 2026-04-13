@@ -22,5 +22,6 @@ RUN mkdir -p /app/ssl
 # Using port 8080 instead of 8998 to avoid conflicts with other local services
 EXPOSE 8080
 
+# NOTE: Remove --ssl and /app/ssl args if running locally without certificates
 ENTRYPOINT []
 CMD ["/app/moshi/.venv/bin/python", "-m", "moshi.server", "--ssl", "/app/ssl", "--port", "8080"]
