@@ -23,5 +23,7 @@ RUN mkdir -p /app/ssl
 EXPOSE 8080
 
 # NOTE: Remove --ssl and /app/ssl args if running locally without certificates
+# Personal note: I typically run this without SSL locally, so I've removed those args below.
+# To re-enable SSL, add back: --ssl /app/ssl
 ENTRYPOINT []
-CMD ["/app/moshi/.venv/bin/python", "-m", "moshi.server", "--ssl", "/app/ssl", "--port", "8080"]
+CMD ["/app/moshi/.venv/bin/python", "-m", "moshi.server", "--port", "8080"]
