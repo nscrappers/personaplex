@@ -68,15 +68,10 @@ Access the Web UI directly at https://11.54.401.33:8998
 
 > **Note (personal):** On my machine I also needed to allow the self-signed cert in Chrome by navigating to `chrome://flags/#allow-insecure-localhost` and enabling it.
 
+> **Note (personal):** On Firefox, you can bypass the SSL warning by clicking "Advanced" → "Accept the Risk and Continue" on the certificate error page — no flags needed.
+
 ### Offline Evaluation
 
 For offline evaluation use the offline script that streams in an input wav file and produces an output wav file from the captured output stream. The output file will be the same duration as the input file.
 
-Add `--cpu-offload` to any command below if your GPU has insufficient memory (requires `accelerate` package). Or install cpu-only PyTorch for offline evaluation on pure CPU.
-
-**Assistant example:**
-```bash
-HF_TOKEN=<TOKEN> \
-python -m moshi.offline \
-  --voic
-```
+Add `--cpu-offload` to any command below if your GPU has insufficient memory (requires `ac
