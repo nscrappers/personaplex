@@ -2,6 +2,10 @@
 
 Fork of NVIDIA/personaplex with extended persona management,
 audio processing, and flexible LLM backend support.
+
+Personal fork notes:
+- Using this for experimenting with custom persona configs
+- See examples/ directory for my test scripts
 """
 
 __version__ = "0.1.0"
